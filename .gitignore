@@ -1,0 +1,4 @@
+release
+build
+.cache
+bindata.go
