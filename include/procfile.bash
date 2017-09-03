@@ -44,6 +44,7 @@ procfile-start() {
 
 procfile-exec() {
 	declare desc="Run as unprivileged user with Heroku-like env"
+	export PS1="\[\033[01;34m\]\w\[\033[00m\] \[\033[01;32m\]$ \[\033[00m\]"
 	procfile-load-profile
 	cd "$HOME" || return 1
 	exec $(eval echo "$@")
